@@ -121,6 +121,129 @@
           }
         }
       }
+    },
+    "client": {
+      "projectType": "library",
+      "root": "libs/client",
+      "sourceRoot": "libs/client/src",
+      "prefix": "bridge-replacement-example",
+      "architect": {
+        "build": {
+          "builder": "@nrwl/angular:ng-packagr-lite",
+          "outputs": ["dist/libs/client"],
+          "options": {
+            "project": "libs/client/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/client/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "libs/client/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/client"],
+          "options": {
+            "jestConfig": "libs/client/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/client/src/**/*.ts",
+              "libs/client/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
+    "server": {
+      "projectType": "library",
+      "root": "libs/server",
+      "sourceRoot": "libs/server/src",
+      "prefix": "bridge-replacement-example",
+      "architect": {
+        "build": {
+          "builder": "@nrwl/angular:ng-packagr-lite",
+          "outputs": ["dist/libs/server"],
+          "options": {
+            "project": "libs/server/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/server/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "libs/server/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/server"],
+          "options": {
+            "jestConfig": "libs/server/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/server/src/**/*.ts",
+              "libs/server/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
+    "transport-layer": {
+      "projectType": "library",
+      "root": "libs/transport-layer",
+      "sourceRoot": "libs/transport-layer/src",
+      "prefix": "bridge-replacement-example",
+      "architect": {
+        "build": {
+          "builder": "@nrwl/angular:ng-packagr-lite",
+          "outputs": ["dist/libs/transport-layer"],
+          "options": {
+            "project": "libs/transport-layer/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/transport-layer/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "libs/transport-layer/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/transport-layer"],
+          "options": {
+            "jestConfig": "libs/transport-layer/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/transport-layer/src/**/*.ts",
+              "libs/transport-layer/src/**/*.html"
+            ]
+          }
+        }
+      }
     }
   },
   "cli": {

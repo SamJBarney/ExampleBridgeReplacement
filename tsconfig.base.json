@@ -14,7 +14,14 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@cricut/bridge-client": ["libs/client/src/index.ts"],
+      "@cricut/bridge-server": ["libs/server/src/index.ts"],
+      "@cricut/connection-abstraction": [
+        "libs/connection-abstraction/src/index.ts"
+      ],
+      "@cricut/transport-layer": ["libs/transport-layer/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }

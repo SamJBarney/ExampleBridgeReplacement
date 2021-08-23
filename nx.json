@@ -33,6 +33,15 @@
     "bridge-replacement-example-e2e": {
       "tags": [],
       "implicitDependencies": ["bridge-replacement-example"]
+    },
+    "client": {
+      "tags": []
+    },
+    "server": {
+      "tags": []
+    },
+    "transport-layer": {
+      "tags": []
     }
   }
 }

@@ -1,0 +1,15 @@
+<div>
+    <div class="data">
+        <div><span>Client-driven HTTP Request: </span>{{time}}</div>
+        <button (click)="requestTime()">Request Time via HTTP</button>
+    </div>
+    <div class="data">
+        <div><span>Transitory Websocket Channel: </span>{{response}}</div>
+        <button (click)="sendWebsocketMessage()">Send Websocket Message</button>
+        <button *ngIf="isSubscribed" (click)="unsubscribeWebsocket()">Unsubscibe</button>
+        <button *ngIf="!isSubscribed" (click)="subscribeWebsocket()">Subscibe</button>
+    </div>
+    <div>
+        <div><span>Permanent Websocket Channel: </span>{{randomResponse}}</div>
+    </div>
+</div>
